@@ -621,7 +621,7 @@ class MLP(nn.Module):
         if self.activation == "relu2":
             x = torch.relu(x).square()
         elif self.activation == "leaky_relu2":
-            x = F.leaky_relu(x, negative_slope=0.01).square()
+            x = F.leaky_relu(x, negative_slope=0.5).square()
         else:  # swish2
             x = F.silu(x).square()
         return self.proj(x)
