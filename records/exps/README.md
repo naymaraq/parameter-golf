@@ -1,9 +1,9 @@
 # Changelog
 
-| File | Idea | Score (BPB) | Run Script | Comments |
-|------|------|-------------|------------|----------|
-| train_gpt.py | Baseline | 1.22594923 | — | — |
-| train_gpt.py | LeakyReLU^2 (negative_slope=0.5) | 1.22471137 | [LeakyReLU](#leakyrelu) | swish2 obtained 1.2281 |
+| Idea | Score (BPB) | Size | Run Script | Comments |
+|------|-------------|------|------------|----------|
+| Baseline | 1.22594923 | — | — | — |
+| LeakyReLU^2 (negative_slope=0.5) | 1.22471137 | — | [LeakyReLU](#leakyrelu) | swish2 obtained 1.2281 |
 
 ## Run Scripts
 
