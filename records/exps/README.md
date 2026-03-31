@@ -1,4 +1,9 @@
-# Changelog
+## Lessons Learned
+
+1. **LeakyReLU activation is slightly better** — `leaky_relu2` (LeakyReLU squared) outperforms the baseline (swish2 got 1.2281 vs 1.2247 for LeakyReLU^2).
+2. **Increasing L/D blows the 16MB artifact limit** — both the 12L D512 and 9L D640 configs exceed 16MB after int8+zlib compression. To benefit from larger models, more aggressive quantization (e.g., int4 or pruning) is needed to stay within budget.
+
+# Change Log
 
 | Idea | Score (BPB) | Steps | Serialized model int8+zlib | Total submission size int8+zlib | Run Script | Comments |
 |------|-------------|-------|---------------------------|--------------------------------|------------|----------|
